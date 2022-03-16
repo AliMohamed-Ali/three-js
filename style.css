@@ -51,7 +51,7 @@ right: 20px;
 #input_files{
 position: absolute;
   top: 30px;
-  width: 100%;
+  left:10px;
   padding: 20px;
   display: flex;
   justify-content: flex-start;
