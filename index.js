@@ -195,25 +195,6 @@ document.querySelector('#texture').addEventListener('change', function (e) {
 
 
 document.querySelector('#model').addEventListener('change', function (e) {
-  //   let file = e.target.files[0]
-  //   let reader = new FileReader();
-  //   // This is code that runs after reader.readAsText() finishes
-  //   reader.onload = function ( gltfText ) {
-
-  //     var loader = new THREE.GLTFLoader();
-
-  //     loader.parse( gltfText, '', function( gltf ){
-
-  //       scene.add( gltf.scene );
-  //       renderer.render( scene, camera );
-
-  //     }, function( errormsg ){
-  //         console.error( errormsg );
-  //     });    
-
-  // };
-
-  // reader.readAsText( file );
   let file = e.target.files[0];
   let reader = new FileReader();
   reader.readAsArrayBuffer(file);
