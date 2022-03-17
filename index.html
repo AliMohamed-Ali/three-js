@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+<head>
+  <meta charset="UTF-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Task Assiment</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-      <!-- the haeder for element and color  -->
-      <div id="header"></div>
-      <input type="color" name="" id="pickColor">
-     <div id='input_files'>
-        <label for="texture">Texture: <input type="file" id="texture" ></label>
-       <label for="model">Model: <input type="file" id="model"></label>
-    </div> 
-    <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
-    <!-- The canvas element is used to draw the 3D scene -->
-    <canvas id="c"></canvas>
-    <!-- The main three.js file -->
-    <script src="https://unpkg.com/three@0.127.0/build/three.js"></script>
+  <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+  <title>Task Assiment</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
-    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-    <script src="index.js"></script>
-  </body>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-left">
+        <!-- <label for="">
+           <input type="checkbox">title
+        </label>
+        <label for="">
+           <input type="checkbox">title
+        </label>
+        <label for="">
+           <input type="checkbox">title
+        </label> -->
+      </div>
+      <div class="header-right">
+        <input type="color" id="pickColor">
+      </div>
+    </div>
+    <hr>
+    <div id='input_files'>
+      <div class="container_input">
+        <div class="borderOnly">
+          <label for="texture" class="custom-file-upload padborder">Change Material <input type="file"
+              id="texture"></label>
+          <label for="model" class="custom-file-upload" style="padding-left:10px">Choose file:
+            <input type="file" id="model" style="display:none">
+          </label>
+          <input type="button" id="choose-file" value="No file chosen"></input>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/three@0.127.0/build/three.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
