@@ -19,8 +19,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center ;
-  width: 80%;
-  height: 60%;
+  width: 1600px;
+  height: 900px;
   position: relative;
   /* background-color: red; */
 }
@@ -104,22 +104,55 @@ input[type="button"]:click{
   border: none;
 }
 
-
-@media only screen and (max-width: 600px)  {
-    .container{
-      width: 50%;
-      height: 50%;
-    }
-    .header-left{
-      width: 100%;
-    }
-    .header-left label {
-      margin-right: 0;
-    }
-    .header-right{
-     position: absolute;
-      top: 5px;
-      right: 5px;
-    }
-
+/* Mobile */
+@media only screen and (min-width: 480px){
+  .container{
+    width: 50%;
+    height: 50%;
+  }
+  .header-left{
+    width: 100%;
+  }
+  .header-left label {
+    margin-right: 0;
+  }
+  .header-right{
+   position: absolute;
+    top: 5px;
+    right: 5px;
+  }
 }
+
+/* Tablet */
+@media only screen and (min-width: 768px)and (max-width:1024px){
+  .container{
+    width: 1600px;
+    height: 900px;
+  }
+} 
+
+/* Desktop */
+/* @media only screen and (max-width: 992px){
+  .container{
+    width: 800px;
+    height: 650px;
+  }
+} */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  /* Styles */
+  .container{
+    width: 100%;
+    height: 80%;
+  }
+  .header-left{
+    width: 100%;
+  }
+  .header-left label {
+    margin-right: 0;
+  }
+  .header-right{
+   position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  }
