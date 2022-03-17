@@ -11,6 +11,13 @@ scene.background = color
 const camera = new THREE.PerspectiveCamera( 15, width / height, 1, 1000 );
 camera.position.set( 15, 10, 15 );
 scene.add( camera );
+window.addEventListener('resize',function(){
+  var width = container.offsetWidth;
+  var height = container.offsetHeight;
+  renderer.setSize(width,height);
+  camera.aspect = width/height;
+  camera.updateProjectionMatrix();
+})
 
 // camera.position.z = 5
 const renderer = new THREE.WebGLRenderer();
